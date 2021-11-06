@@ -1,0 +1,13 @@
+{
+  "name": "lint-staged-config",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/lint-staged-config.cjs.js",
+  "module": "dist/lint-staged-config.esm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

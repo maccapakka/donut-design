@@ -1,0 +1,28 @@
+{
+  "name": "@donut/monorepo",
+  "private": true,
+  "author": "Stevie McCann <stevie.mccann@live.co.uk>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "preconstruct dev && manypkg check",
+    "build": "preconstruct build",
+    "start": "npm run storybook --workspace=@donut/design-system"
+  },
+  "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "@manypkg/cli": "^0.18.0",
+    "@preconstruct/cli": "^2.1.4",
+    "typescript": "^4.4.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
