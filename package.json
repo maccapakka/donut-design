@@ -1,11 +1,16 @@
 {
   "name": "@donut/monorepo",
   "private": true,
-  "author": "Stevie McCann <stevie.mccann@live.co.uk>",
   "license": "MIT",
+  "author": "Stevie McCann <stevie.mccann@live.co.uk>",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "postinstall": "preconstruct dev && manypkg check",
     "build": "preconstruct build",
+    "postinstall": "preconstruct dev && manypkg check",
+    "lint:js": "eslint .",
+    "prepare": "husky install",
     "start": "npm run storybook --workspace=@donut/design-system"
   },
   "dependencies": {
@@ -15,11 +20,11 @@
     "@babel/preset-typescript": "^7.15.0",
     "@manypkg/cli": "^0.18.0",
     "@preconstruct/cli": "^2.1.4",
+    "eslint": "^8.2.0",
+    "husky": "^7.0.0",
+    "prettier": "^2.4.1",
     "typescript": "^4.4.3"
   },
-  "workspaces": [
-    "packages/*"
-  ],
   "preconstruct": {
     "packages": [
       "packages/*"
